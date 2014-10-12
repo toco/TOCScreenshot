@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="TOCViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
+                        <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" placeholderIntrinsicWidth="320" placeholderIntrinsicHeight="320" translatesAutoresizingMaskIntoConstraints="NO" id="WPZ-hD-plv">
+                                <rect key="frame" x="0.0" y="135" width="600" height="465"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                                        <integer key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="eQW-KR-xFz">
+                                <rect key="frame" x="368" y="28" width="51" height="31"/>
+                                <connections>
+                                    <action selector="setCropStatusBar:" destination="vXZ-lx-hvc" eventType="valueChanged" id="itx-xk-dwW"/>
+                                </connections>
+                            </switch>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Crop status bar" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d20-u3-rBc">
+                                <rect key="frame" x="240" y="33" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xBk-1F-DaQ">
+                                <rect key="frame" x="236" y="67" width="128" height="30"/>
+                                <state key="normal" title="update screenshot">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="updateScreenshot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="Ia2-gB-qbS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uBN-p8-74n">
+                                <rect key="frame" x="244" y="105" width="112" height="30"/>
+                                <state key="normal" title="save screenshot">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="saveScreenshot:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="pdj-SL-SG1"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="WPZ-hD-plv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="kh9-bI-dsS" secondAttribute="leading" id="4GX-6x-ZJg"/>
+                            <constraint firstItem="xBk-1F-DaQ" firstAttribute="top" secondItem="d20-u3-rBc" secondAttribute="bottom" constant="13" id="6h8-Kj-ZlK"/>
+                            <constraint firstItem="d20-u3-rBc" firstAttribute="centerX" secondItem="xBk-1F-DaQ" secondAttribute="centerX" id="BOw-ck-7wg"/>
+                            <constraint firstAttribute="centerX" secondItem="WPZ-hD-plv" secondAttribute="centerX" id="E8n-UP-SDf"/>
+                            <constraint firstItem="d20-u3-rBc" firstAttribute="centerY" secondItem="eQW-KR-xFz" secondAttribute="centerY" id="R20-cL-9bE"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="WPZ-hD-plv" secondAttribute="bottom" id="Svv-IO-Yis"/>
+                            <constraint firstItem="WPZ-hD-plv" firstAttribute="top" secondItem="uBN-p8-74n" secondAttribute="bottom" constant="8" id="W8j-Q9-ZMu"/>
+                            <constraint firstItem="xBk-1F-DaQ" firstAttribute="centerX" secondItem="kh9-bI-dsS" secondAttribute="centerX" id="aS8-N9-7Jf"/>
+                            <constraint firstItem="d20-u3-rBc" firstAttribute="top" secondItem="jyV-Pf-zRb" secondAttribute="bottom" constant="13" id="bfw-Y7-eOd"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" relation="greaterThanOrEqual" secondItem="WPZ-hD-plv" secondAttribute="bottom" id="f2w-GK-Div"/>
+                            <constraint firstItem="WPZ-hD-plv" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="fbG-DE-4aZ"/>
+                            <constraint firstAttribute="trailing" secondItem="WPZ-hD-plv" secondAttribute="trailing" id="hN3-pt-5WC"/>
+                            <constraint firstItem="xBk-1F-DaQ" firstAttribute="centerX" secondItem="uBN-p8-74n" secondAttribute="centerX" id="htY-SC-0J5"/>
+                            <constraint firstItem="eQW-KR-xFz" firstAttribute="leading" secondItem="d20-u3-rBc" secondAttribute="trailing" constant="8" symbolic="YES" id="l8q-w9-JGK"/>
+                            <constraint firstItem="uBN-p8-74n" firstAttribute="top" secondItem="xBk-1F-DaQ" secondAttribute="bottom" constant="8" symbolic="YES" id="p0R-EH-458"/>
+                            <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="WPZ-hD-plv" secondAttribute="trailing" id="v2s-Yj-im5"/>
+                            <constraint firstItem="WPZ-hD-plv" firstAttribute="top" secondItem="uBN-p8-74n" secondAttribute="bottom" id="vEb-fU-N6H"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="4GX-6x-ZJg"/>
+                                <exclude reference="W8j-Q9-ZMu"/>
+                                <exclude reference="v2s-Yj-im5"/>
+                                <exclude reference="f2w-GK-Div"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="WPZ-hD-plv" id="aG8-p4-B3j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260.625" y="143.66197183098592"/>
+        </scene>
+    </scenes>
+</document>

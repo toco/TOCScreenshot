@@ -1,0 +1,14 @@
+PODS:
+  - TOCScreenshot (0.1.0)
+
+DEPENDENCIES:
+  - TOCScreenshot (from `../`)
+
+EXTERNAL SOURCES:
+  TOCScreenshot:
+    :path: ../
+
+SPEC CHECKSUMS:
+  TOCScreenshot: c13a34e1995446d6abfba4d8d08a59d47948db67
+
+COCOAPODS: 0.34.2
